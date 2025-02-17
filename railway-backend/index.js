@@ -10,5 +10,7 @@ app.get('/', (req, res) => {
 
 // 启动服务
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    // 输出正确的访问 URL，当代码部署到 Railway 后显示的是公开 URL
+    console.log(`Server is running on http://localhost:${PORT}`); // 本地开发时
+    console.log(`Public URL: https://your-project-name.up.railway.app`); // Railway 部署时显示正确的公开链接
 });
